@@ -1,7 +1,9 @@
 require "bike"
 
 describe Bike do
-  it "text" do
+  subject {described_class.new}
 
+  it "responds to #working?" do
+    expect(subject).to respond_to(:working?)
   end
 end

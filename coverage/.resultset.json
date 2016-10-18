@@ -1,11 +1,35 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/roystonHenson/Projects/revists/boris-bikes/spec/bike_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/roystonHenson/Projects/revists/boris-bikes/lib/bike.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/roystonHenson/Projects/revists/boris-bikes/spec/docking_station_spec.rb": [
         1,
         null,
         1,
         2,
+        2,
+        null,
+        1,
+        1,
         null,
         1,
         1,
@@ -22,6 +46,6 @@
         null
       ]
     },
-    "timestamp": 1476821162
+    "timestamp": 1476821884
   }
 }
