@@ -1,7 +1,9 @@
 require "docking_station"
 
 describe DockingStation do
-  it "text" do
+subject {described_class.new}
 
+  it "reponds to #release_bike" do
+    expect(subject).to respond_to(:release_bike)
   end
 end
