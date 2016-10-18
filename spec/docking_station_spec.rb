@@ -23,8 +23,14 @@ describe DockingStation do
     end
   end
   describe "#empty?" do
-    it "raises error when empty" do
+    it "raises error releasing bike, while empty" do
       expect{subject.release_bike}.to raise_error(DockingStation::ERR_EMPTY_BIKERACK)
+    end
+  end
+  describe "#full?" do
+    it "raises error when docking bike, while full" do
+      20.times {subject.dock_bike(bike)}
+      expect{subject.dock_bike(bike)}.to raise_error(DockingStation::ERR_FULL_BIKERACK)
     end
   end
 end
