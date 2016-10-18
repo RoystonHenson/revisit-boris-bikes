@@ -22,5 +22,9 @@ describe DockingStation do
       expect(subject.bikerack).to include(bike)
     end
   end
-
+  describe "#empty?" do
+    it "raises error when empty" do
+      expect{subject.release_bike}.to raise_error(DockingStation::ERR_EMPTY_BIKERACK)
+    end
+  end
 end
