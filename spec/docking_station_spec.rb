@@ -7,7 +7,7 @@ describe DockingStation do
   describe "#initialize" do
     it "with default capacity" do
       #subject { described_class.new }
-      expect(subject.capacity).to eq(20)
+      expect(subject.capacity).to eq(DockingStation::DEFAULT_CAPACITY)
     end
     it "with user-set capacity" do
       docking_station = DockingStation.new(34)
@@ -40,8 +40,4 @@ describe DockingStation do
       expect{subject.dock_bike(bike)}.to raise_error(DockingStation::ERR_FULL_BIKERACK)
     end
   end
-
-
-
-
 end

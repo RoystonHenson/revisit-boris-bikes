@@ -64,10 +64,6 @@
         2,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/roystonHenson/Projects/revists/boris-bikes/lib/docking_station.rb": [
@@ -112,6 +108,6 @@
         null
       ]
     },
-    "timestamp": 1476883715
+    "timestamp": 1476884089
   }
 }
