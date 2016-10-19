@@ -2,13 +2,16 @@ require_relative 'bike'
 
 class DockingStation
 
-attr_reader :bikerack
+attr_reader :bikerack, :capacity
 
 ERR_EMPTY_BIKERACK = "There are no bikes to release!"
 ERR_FULL_BIKERACK = "The docking station is full!"
-  def initialize
+DEFAULT_CAPACITY = 20
+MAX_CAPACITY = 0
+
+  def initialize(capacity=DEFAULT_CAPACITY)
     @bikerack = []
-    @capacity = 0
+    @capacity = capacity
   end
 
   def release_bike
@@ -19,7 +22,7 @@ ERR_FULL_BIKERACK = "The docking station is full!"
   def dock_bike(bike)
     raise ERR_FULL_BIKERACK if full?
     @bikerack << bike
-    @capacity += 1
+    @capacity -= 1
   end
 
   def empty?
@@ -27,6 +30,6 @@ ERR_FULL_BIKERACK = "The docking station is full!"
   end
 
   def full?
-    @capacity >= 20
+    @capacity <= MAX_CAPACITY
   end
 end
