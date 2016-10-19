@@ -16,15 +16,19 @@ MAX_CAPACITY = 0
 
   def release_bike
     raise ERR_EMPTY_BIKERACK if empty?
+    @capacity += 1
     @bikerack.pop
   end
 
   def dock_bike(bike)
     raise ERR_FULL_BIKERACK if full?
-    @bikerack << bike
     @capacity -= 1
+    @bikerack << bike
+
   end
 
+  private
+  
   def empty?
       @bikerack.empty?
   end
